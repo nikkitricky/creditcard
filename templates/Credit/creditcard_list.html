@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Card list</title>
+</head>
+<body>
+<a href="{% url 'logout' %}">Log out</a>
+    <h1>Cards List</h1>
+    Create a new card? <a href="{% url 'card-create' %}">Create</a>
+    <table>
+        {% for card in creditcard_list %}
+    <tr>
+            <td><a href="{% url 'card-detail' pk=card.id %}">{{ card.number }}</a></td>
+            <td><a href="{% url 'card-update' pk=card.id %}">Update</a> </td>
+            <td><a href="{% url 'card-delete' pk=card.id %}">Delete</a> </td>
+    </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

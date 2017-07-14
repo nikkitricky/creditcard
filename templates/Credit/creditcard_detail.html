@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Card detail</title>
+</head>
+<body>
+
+<h2>Card Details</h2><br>
+First Name: {{ creditcard.first_name }}<br>
+Last Name: {{ creditcard.last_name }}<br>
+Name on card: {{ creditcard.name_on_card }}<br>
+Card Number: {{ creditcard.number }}<br>
+Type of Card: {{ creditcard.type }}<br>
+Expiry Date: {{ creditcard.expiry_date }}<br>
+<a href="{% url 'card-list' %}">Back</a>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Credit card delete confirmation</title>
+</head>
+<body>
+<h2>Credit Card deletion confirmation</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Delete</button>
+    <a href="{% url 'card-list' %}">Back</a>
+  </form>
+
+</body>
+</html>
